@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: [],
+	content: ['./src/**/*.{js,jsx,ts,tsx}'],
 	theme: {
 		extend: {
 			colors: {
@@ -18,7 +18,7 @@ module.exports = {
 			},
 
 			fontFamily: {
-				'primary': ['Red Hat Text', 'sans-serif']
+				primary: ['Red Hat Text', 'sans-serif']
 			},
 			fontSize: {
 				'heading-l': [
@@ -53,14 +53,14 @@ module.exports = {
 						fontWeight: '400'
 					}
 				],
-        'body-s': [
+				'body-s': [
 					'14px',
 					{
 						lineHeight: '150%',
 						letterSpacing: '0px',
 						fontWeight: '700'
 					}
-				],
+				]
 			}
 		}
 	},
