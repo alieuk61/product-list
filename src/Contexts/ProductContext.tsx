@@ -56,7 +56,7 @@ export const ProductProvider = ({ children }: PropsWithChildren) => {
 	const decrementItemQuantity = (name: string) => {
 		setCart((prevCart) =>
 			prevCart.map((item) =>
-				item.name === name && item.quantity > 1
+				item.name === name && item.quantity > 0
 					? { ...item, quantity: item.quantity - 1 }
 					: item
 			)
@@ -104,7 +104,7 @@ export const ProductProvider = ({ children }: PropsWithChildren) => {
 	)
 }
 
-export const useCartContext = () => {
+export const useProductContext = () => {
 	const context = useContext(ProductContext)
 	if (!context) {
 		throw new Error('useCartContext must be used within a ProductProvider')
