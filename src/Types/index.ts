@@ -6,6 +6,7 @@ export interface ICartItem {
 		desktop: string
 	}
 	name: string
+    category: string
 	price: number
 	quantity: number
 }
